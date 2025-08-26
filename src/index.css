@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/assets/fonts/Jost-VariableFont_wght.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@theme {
+  --custom-peach: #E7816B;
+  --custom-black: #1D1C1E;
+  --custom-light-peach: #FFAD9B;
+  --custom-dark-grey: #333136;
+  --custom-light-grey: #F1F3F5;
+  --custom-beige: #FDF3F0;
+  --font-jost: 'Jost', sans-serif;
+}
+
+.primary-btn {
+  @apply bg-white text-center text-black py-5 w-[150px] rounded-lg cursor-pointer hover:bg-[var(--custom-light-peach)] hover:text-white transition-colors duration-300
+}
+
+.secondary-btn {
+  @apply text-white text-center bg-[var(--custom-peach)] py-5 w-[150px] rounded-lg cursor-pointer hover:bg-[var(--custom-light-peach)] transition-colors duration-300
+}
+
+input {
+  @apply border-b-2 border-white/50 py-5 lg:py-2 px-5 outline-none hover:border-white/100 cursor-pointer
+}
