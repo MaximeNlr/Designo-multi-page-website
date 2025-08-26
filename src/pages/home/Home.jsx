@@ -1,9 +1,5 @@
-import Header from "../../components/header/Header"
-import Footer from "../../components/footer/Footer"
 import { Link } from "react-router-dom"
-import MobileHeader from "../../components/mobile_header/MobileHeader"
 import Navigation from "../../components/navigation/Navigation"
-import GetInTouch from "../../components/get_in_touch/GetInTouch"
 
 export default function Home() {
 
@@ -27,8 +23,6 @@ export default function Home() {
 
     return (
         <div>
-            <Header />
-            <MobileHeader />
             <div
                 className="font-jost lg:flex lg:flex-row items-center h-screen relative 
                      bg-[var(--custom-peach)] bg-[url('./assets/home/desktop/bg-pattern-hero-home.svg')] 
@@ -75,8 +69,6 @@ export default function Home() {
                     </div>
                 ))}
             </div>
-            <GetInTouch />
-            <Footer />
         </div>
     )
 }

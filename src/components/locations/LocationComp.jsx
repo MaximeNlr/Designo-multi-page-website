@@ -32,7 +32,7 @@ export default function LocationComp() {
                     </div>
                     <p className="text-[20px] tracking-[5px]">{item.title}</p>
                     <Link
-                        to="#"
+                        to="/locations"
                         className="secondary-btn text-center"
                     >
                         SEE LOCATION

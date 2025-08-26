@@ -1,14 +1,8 @@
-import Header from "../../components/header/Header"
-import MobileHeader from "../../components/mobile_header/MobileHeader"
-import Footer from "../../components/footer/Footer"
 import LocationComp from "../../components/locations/LocationComp"
-import GetInTouch from "../../components/get_in_touch/GetInTouch"
 
 export default function About() {
     return (
         <div>
-            <Header />
-            <MobileHeader />
             <div className="lg:flex lg:flex-row-reverse md:mx-10 lg:mx-60">
                 <picture className="w-full md:w-2/5 lg:w-5/12 flex-shrink-0">
                     <source srcSet="./assets/about/desktop/image-about-hero.jpg" media="(min-width:1024px)" />
@@ -84,8 +78,6 @@ export default function About() {
                     </p>
                 </div>
             </div>
-            <GetInTouch />
-            <Footer />
         </div>
     )
 }
