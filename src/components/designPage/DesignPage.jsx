@@ -3,12 +3,12 @@ export default function DesignPage({ title, description, bgImage, items }) {
         <div className="md:mx-5 lg:mx-60">
             <div
                 className="flex flex-col items-center gap-10 bg-[var(--custom-peach)] bg-no-repeat text-white px-5 py-16 md:rounded-2xl"
-                style={{ backgroundImage: `url(${bgImage})`, backgroundSize: "cover" }}
+                style={{ backgroundImage: `url(${bgImage})`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }}
             >
                 <h1 className="text-3xl lg:text-5xl">{title}</h1>
                 <p className="text-center lg:w-1/3">{description}</p>
             </div>
-            <div className="flex flex-col lg:grid lg:grid-cols-3 gap-14 lg:gap-10 px-5 py-20 lg:px-0">
+            <div className="flex flex-col lg:grid lg:grid-cols-3 gap-14 lg:gap-10 px-5 py-20 lg:px-0" >
                 {items.map((item) => (
                     <div
                         key={item.title}

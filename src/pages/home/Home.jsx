@@ -26,7 +26,7 @@ export default function Home() {
             <div
                 className="font-jost lg:flex lg:flex-row items-center h-[900px] relative 
                      bg-[var(--custom-peach)] bg-[url('./assets/home/desktop/bg-pattern-hero-home.svg')] 
-                     bg-no-repeat bg-cover text-center lg:text-left text-white pt-24 px-5 lg:pl-20 
+                     bg-no-repeat bg-contain bg-right text-center lg:text-left text-white pt-24 px-5 lg:pl-20 
                      md:mx-10 lg:mx-60 md:h-[800px] lg:h-[640px] md:rounded-2xl overflow-hidden"
             >
                 <div className="flex flex-col items-center lg:items-start gap-10 lg:gap-10 lg:w-1/2 z-10">
@@ -59,16 +59,16 @@ export default function Home() {
                         className="flex flex-col items-center md:flex-row md:gap-10 lg:gap-0 lg:flex-col"
                     >
                         <div
-                            className="bg-[url(./assets/home/desktop/bg-pattern-hero-home.svg)] bg-contain bg-center bg-no-repeat md:w-1/2"
+                            className="bg-[url(./assets/home/desktop/bg-pattern-hero-home.svg)] bg-contain bg-center bg-no-repeat md:w-1/2 lg:h-full lg:w-[202px]"
                         >
                             <img
-                                className=""
+                                className="w-full h-full min-w-[150px]"
                                 src={item.img}
                                 alt=""
                             />
                         </div>
                         <div className="text-center md:text-start lg:text-center">
-                            <p className="py-10 md:py-4 lg:py-10 text-[20px] tracking-[5px]">{item.title}</p>
+                            <p className="py-10 md:py-4 lg:py-10 text-[20px] tracking-[5px] font-medium">{item.title}</p>
                             <p className="leading-6 text-[var(--custom-dark-grey)]">{item.text}</p>
                         </div>
                     </div>

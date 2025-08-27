@@ -1,8 +1,16 @@
 import { locationsItems } from "../../data/LocationData"
-import { APIProvider, Map } from "@vis.gl/react-google-maps"
+import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps"
 import ScrollToHash from "../../utils/ScrollToHash"
 
 export default function Locations() {
+
+    const mapOptions = {
+        zoomControl: false,
+        streetViewControl: false,
+        mapTypeControl: false,
+        fullscreenControl: false,
+    };
+
     return (
         <div className="flex flex-col gap-20 md:mx-10 lg:mx-60 pb-40">
             <ScrollToHash />
@@ -19,7 +27,10 @@ export default function Locations() {
                             <div className="md:rounded-2xl overflow-hidden h-[350px]">
                                 <Map defaultCenter={{ lat: item.lat, lng: item.lng }}
                                     defaultZoom={12}
-                                    style={{ width: "100%", height: "100%" }} />
+                                    style={{ width: "100%", height: "100%" }}
+                                    options={mapOptions}
+                                />
+                                <Marker position={{ lat: item.lat, lng: item.lng }} />
                             </div>
                         </APIProvider>
                     </div>

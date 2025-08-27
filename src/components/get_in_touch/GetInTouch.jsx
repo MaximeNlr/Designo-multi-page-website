@@ -9,7 +9,7 @@ export default function GetInTouch() {
         <div>
             {pathname !== '/contact' &&
                 <div className="relative bottom-0 flex flex-col lg:flex-row items-center 
-                    bg-[url(./assets/shared/desktop/bg-pattern-call-to-action.svg)] bg-cover bg-no-repeat
+                    bg-[url(./assets/shared/desktop/bg-pattern-call-to-action.svg)] bg-cover bg-right bg-no-repeat
                     lg:justify-between gap-5 md:gap-0 
                     h-auto md:h-[300px] bg-[var(--custom-peach)] text-white 
                     mx-5 md:mx-10 md:px-20 lg:mx-60 -mb-20 rounded-2xl 

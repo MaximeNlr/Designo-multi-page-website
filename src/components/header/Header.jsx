@@ -10,9 +10,9 @@ export default function Header() {
                     alt=""
                 /></Link>
             <nav className="flex flex-row gap-24">
-                <Link to="/about" className="border-b-2 border-transparent hover:border-b-2 hover:border-black duration-150 transition-colors">OUR COMPANY</Link>
-                <Link to="/locations" className="border-b-2 border-transparent hover:border-b-2 hover:border-black duration-150 transition-colors">LOCATIONS</Link>
-                <Link to="/contact" className="border-b-2 border-transparent hover:border-b-2 hover:border-black duration-150 transition-colors">CONTACT</Link>
+                <Link to="/about" className="header-link">OUR COMPANY</Link>
+                <Link to="/locations" className="header-link">LOCATIONS</Link>
+                <Link to="/contact" className="header-link">CONTACT</Link>
             </nav>
         </header>
     )
