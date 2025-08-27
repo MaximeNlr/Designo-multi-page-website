@@ -7,9 +7,12 @@ export default function Header() {
                 <img
                     className="w-[200px]"
                     src="./assets/shared/desktop/logo-dark.png"
-                    alt=""
-                /></Link>
-            <nav className="flex flex-row gap-24">
+                    alt="Company Logo"
+                />
+            </Link>
+            <nav
+                aria-label="Primary site navigation"
+                className="flex flex-row gap-24">
                 <Link to="/about" className="header-link">OUR COMPANY</Link>
                 <Link to="/locations" className="header-link">LOCATIONS</Link>
                 <Link to="/contact" className="header-link">CONTACT</Link>

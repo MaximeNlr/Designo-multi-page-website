@@ -6,7 +6,7 @@ export default function DesignPage({ title, description, bgImage, items }) {
                 style={{ backgroundImage: `url(${bgImage})`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }}
             >
                 <h1 className="text-3xl lg:text-5xl">{title}</h1>
-                <p className="text-center lg:w-1/3">{description}</p>
+                <p className="text-center md:px-28 lg:px-0 lg:w-1/3">{description}</p>
             </div>
             <div className="flex flex-col lg:grid lg:grid-cols-3 gap-14 lg:gap-10 px-5 py-20 lg:px-0" >
                 {items.map((item) => (

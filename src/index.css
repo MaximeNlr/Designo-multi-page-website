@@ -33,3 +33,7 @@ input {
 .header-link {
   @apply border-b-[1px] border-transparent hover:border-b-[1px] text-[14px] hover:border-black duration-150 transition-colors tracking-[2px] font-light
 }
+
+.footer-links {
+  @apply border-b-[1px] text-white border-transparent hover:border-b-[1px] text-[14px] hover:border-white duration-150 transition-colors tracking-[2px] font-light
+}

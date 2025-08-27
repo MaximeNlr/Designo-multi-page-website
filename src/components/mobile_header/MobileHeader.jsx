@@ -26,11 +26,17 @@ export default function MobileHeader() {
                 />
             </Link>
             {isActive === false ?
-                <button onClick={() => setIsActive(true)}>
+                <button
+                    aria-label="Open menu"
+                    onClick={() => setIsActive(true)}
+                >
                     <img src="./assets/shared/mobile/icon-hamburger.svg" alt="" />
                 </button>
                 :
-                <button onClick={() => setIsActive(false)}>
+                <button
+                    aria-label="Close menu"
+                    onClick={() => setIsActive(false)}
+                >
                     <img src="./assets/shared/mobile/icon-close.svg" alt="" />
                 </button>
             }

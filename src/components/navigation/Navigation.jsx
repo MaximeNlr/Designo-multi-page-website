@@ -9,17 +9,18 @@ export default function Navigation() {
     const items = [
         {
             name: "WEB DESIGN",
-            img: "./assets/home/mobile/image-web-design.jpg",
+            image: "./assets/home/desktop/image-web-design-large.jpg",
+            imageMobile: "./assets/home/desktop/image-web-design-small.jpg",
             link: "/web-design"
         },
         {
             name: "APP DESIGN",
-            img: "./assets/home/mobile/image-app-design.jpg",
+            image: "./assets/home/mobile/image-app-design.jpg",
             link: "/app-design"
         },
         {
             name: "GRAPHIC DESIGN",
-            img: "./assets/home/mobile/image-graphic-design.jpg",
+            image: "./assets/home/mobile/image-graphic-design.jpg",
             link: "/graphic-design"
         },
     ]
@@ -35,22 +36,29 @@ export default function Navigation() {
                     ${visibleItems.length === 3 && index === 0 ? "lg:row-span-2" : ""}`}
                     to={item.link}
                 >
-                    <img
-                        className="h-full w-full object-cover rounded-2xl"
-                        src={item.img}
-                        alt=""
-                    />
+                    <picture className="">
+                        <source srcSet={item.imageMobile} media="(max-width:767px)"
+                        />
+                        <img
+                            className="h-[250px] md:[200px] lg:h-full w-full object-cover rounded-2xl"
+                            src={item.image}
+                            alt={`Image de l'element de navigation ${item.name}`}
+                        />
+                    </picture>
                     <div
-                        className="absolute inset-0 flex flex-col items-center gap-2 justify-center bg-black/50 w-full h-full
+                        className="absolute inset-0 flex flex-col items-center gap-2 justify-center bg-black/70 w-full h-full
                          text-white rounded-2xl cursor-pointer hover:bg-[var(--custom-peach)]/50 transtion-colors duration-300"
                     >
                         <p className="text-2xl">{item.name}</p>
-                        <p
-                            className="flex items-center gap-5 tracking-[5px]"
+                        <Link
+                            className="flex items-center gap-5 tracking-[5px] lg:text-[15px] font-light"
                             to={item.link}
                         >
                             VIEW PROJECTS
-                            <span><img src="./assets/shared/desktop/icon-right-arrow.svg" alt="flex vers la droite" /></span></p>
+                            <span>
+                                <img src="./assets/shared/desktop/icon-right-arrow.svg" alt="flex vers la droite" />
+                            </span>
+                        </Link>
                     </div>
                 </Link>
             ))

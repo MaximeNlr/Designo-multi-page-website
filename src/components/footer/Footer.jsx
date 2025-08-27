@@ -35,9 +35,9 @@ export default function Footer() {
                     alt=""
                 />
                 <nav className="flex flex-col md:flex-row gap-5 items-center">
-                    <Link to="/about" className="border-b-2 border-transparent hover:border-b-2 hover:border-white duration-150 transition-colors">OUR COMPANY</Link>
-                    <Link to="/locations" className="border-b-2 border-transparent hover:border-b-2 hover:border-white duration-150 transition-colors">LOCATIONS</Link>
-                    <Link to="/contact" className="border-b-2 border-transparent hover:border-b-2 hover:border-white duration-150 transition-colors">CONTACT</Link>
+                    <Link to="/about" className="footer-links">OUR COMPANY</Link>
+                    <Link to="/locations" className="footer-links">LOCATIONS</Link>
+                    <Link to="/contact" className="footer-links">CONTACT</Link>
                 </nav>
             </div>
             <div className="flex flex-col md:flex-row lg:justify-between gap-10 text-center md:text-base text-white/50">
