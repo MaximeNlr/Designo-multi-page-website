@@ -1,30 +1,31 @@
 import { locationsItems } from "../../data/LocationData"
 import { APIProvider, Map } from "@vis.gl/react-google-maps"
+import ScrollToHash from "../../utils/ScrollToHash"
 
 export default function Locations() {
     return (
-        <div className="flex flex-col gap-20 md:mx-10 lg:mx-60 lg:pb-40">
+        <div className="flex flex-col gap-20 md:mx-10 lg:mx-60 pb-40">
+            <ScrollToHash />
             {locationsItems.map((item, index) => (
                 <article
-                    key={item.title}
-                    className={index === 1 ? "flex flex-col lg:flex-row md:gap-10 items-stretch"
+                    id={`location-${index}`}
+                    key={index}
+                    className={index === 1
+                        ? "flex flex-col lg:flex-row md:gap-10 items-stretch"
                         : "flex flex-col lg:flex-row-reverse md:gap-10 items-stretch"}
                 >
-                    <picture className="lg:w-1/2 lg:min-w-[350px]">
-                        <source media="(min-width:1024px)" srcSet={item.image} />
-                        <source media="(min-width:768px)" srcSet={item.tabletImage} />
+                    <div className="min-w-[300px] lg:w-[30%]">
                         <APIProvider apiKey={import.meta.env.VITE_GOOGLE_MAP_API_KEY}>
-                            <div className="md:rounded-2xl overflow-hidden">
+                            <div className="md:rounded-2xl overflow-hidden h-[350px]">
                                 <Map defaultCenter={{ lat: item.lat, lng: item.lng }}
                                     defaultZoom={12}
-                                    style={{ width: "100%", height: "350px" }}>
-                                </Map>
+                                    style={{ width: "100%", height: "100%" }} />
                             </div>
                         </APIProvider>
-                    </picture>
+                    </div>
                     <div
-                        className="text-center lg:text-start bg-[var(--custom-beige)] bg-[url(./assets/shared/desktop/bg-pattern-two-circles.svg)]
-                             lg:w-full lg:pl-28 py-20 md:rounded-2xl bg-no-repeat bg-contain"
+                        className="flex-1 text-center lg:text-start bg-[var(--custom-beige)] bg-[url(./assets/shared/desktop/bg-pattern-two-circles.svg)]
+                            py-20 md:rounded-2xl bg-no-repeat bg-contain lg:pl-28"
                     >
                         <h2
                             className="text-3xl lg:text-5xl text-[var(--custom-peach)] pb-10"

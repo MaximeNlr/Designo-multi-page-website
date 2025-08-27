@@ -5,8 +5,6 @@ export default function Navigation() {
 
     const location = useLocation();
     const { pathname } = location;
-    console.log(pathname);
-
 
     const items = [
         {
@@ -26,13 +24,16 @@ export default function Navigation() {
         },
     ]
 
+    const visibleItems = items.filter((i) => i.link !== pathname)
+
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:auto-rows-[300px] gap-7 mt-10 mx-5 md:mx-10 lg:mx-60 pb-20">
-            {items.map((item, index) => (
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:auto-rows-[300px] gap-7 mt-10 mx-5 md:mx-10 pb-20 lg:pb-40 lg:mx-60 lg:mt-20">
+            {visibleItems.map((item, index) => (
                 <Link
+                    key={item.name}
+                    className={`relative block group h-full 
+                    ${visibleItems.length === 3 && index === 0 ? "lg:row-span-2" : ""}`}
                     to={item.link}
-                    className={`${pathname === item.link ? "hidden" : "relative block group"
-                        } ${index === 0 ? "lg:row-span-2" : ""}`}
                 >
                     <img
                         className="h-full w-full object-cover rounded-2xl"
@@ -52,7 +53,8 @@ export default function Navigation() {
                             <span><img src="./assets/shared/desktop/icon-right-arrow.svg" alt="flex vers la droite" /></span></p>
                     </div>
                 </Link>
-            ))}
-        </div>
+            ))
+            }
+        </div >
     )
 }

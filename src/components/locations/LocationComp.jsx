@@ -1,18 +1,22 @@
 import { Link } from "react-router-dom"
+
 export default function LocationComp() {
 
     const items = [
         {
             title: "CANADA",
             image: "./assets/shared/desktop/illustration-canada.svg",
+            sendTo: "/locations#location-0"
         },
         {
             title: "AUSTRALIA",
             image: "./assets/shared/desktop/illustration-australia.svg",
+            sendTo: "/locations#location-1"
         },
         {
             title: "UNITED KINGDOM",
             image: "./assets/shared/desktop/illustration-united-kingdom.svg",
+            sendTo: "/locations#location-2"
         }
     ]
 
@@ -32,7 +36,7 @@ export default function LocationComp() {
                     </div>
                     <p className="text-[20px] tracking-[5px]">{item.title}</p>
                     <Link
-                        to="/locations"
+                        to={item.sendTo}
                         className="secondary-btn text-center"
                     >
                         SEE LOCATION

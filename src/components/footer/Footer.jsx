@@ -41,21 +41,24 @@ export default function Footer() {
                 </nav>
             </div>
             <div className="flex flex-col md:flex-row lg:justify-between gap-10 text-center md:text-base text-white/50">
-                <p className="flex flex-col md:gap-2">
-                    <strong>Designo Central Office</strong>
+                <p className="flex flex-col md:gap-2 font-light">
+                    <strong className="font-bold">Designo Central Office</strong>
                     <span>3886 Wellington Street</span>
                     Toronto, Ontario M9C 3J5
                 </p>
-                <p>
-                    <strong className="flex flex-col lg:gap-2">
-                        Contact Us (Central Office)
-                        <span>P : +1 253-863-8967</span>
-                        contact@designo.co
-                    </strong>
+                <p className="flex flex-col lg:gap-2 font-light">
+                    <strong className="font-bold">Contact Us (Central Office)</strong>
+                    <span>P : +1 253-863-8967</span>
+                    contact@designo.co
                 </p>
                 <div className="flex justify-center items-end gap-5">
                     {socialIcons.map((item) => (
-                        <img className="h-6 w-6 cursor-pointer" src={item.icon} alt={item.name} />
+                        <img
+                            key={item.name}
+                            className="h-6 w-6 cursor-pointer"
+                            src={item.icon}
+                            alt={item.name}
+                        />
                     ))}
                 </div>
             </div>

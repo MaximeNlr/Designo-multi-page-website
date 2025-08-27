@@ -9,7 +9,6 @@ import { Outlet } from "react-router-dom"
 export default function DesignLayout() {
     return (
         <main>
-            <ScrollToTop />
             <Header />
             <MobileHeader />
             <Outlet />
